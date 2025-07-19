@@ -9,32 +9,43 @@
 </head>
 <body>
 
-  <header class="navbar">
+ <header class="navbar">
+  <div class="navbar-container">
     <div class="logo">
       <img src="logo.jpeg" alt="Logo UNIPE" />
     </div>
-    <nav class="menu">
-      <ul>
-        <li>Tecnología, Sociedad y Ciudadanía Digital<br>Carmen Mindeguia</li>
-        <li><a href="#articulo">Articulo</a></li>
-        <li><a href="#acerca">Acerca de</a></li>
-        <li><a href="#actividades">Actividades</a></li>
-        <li><a href="#recursos">Recursos</a></li>
-      </ul>
-    </nav>
-  </header>
+     <div class="portada-texto">
+      <h6 class="solo-movil">SOBRE LO GRATIS EN INTERNET</h6>
+   
+    </div>
+    <div class="hamburguesa" onclick="toggleMenu()">
+      &#9776;
+    </div>
+  </div>
 
-  <section class="portada">
+  <nav class="menu" id="menu">
+    <ul>
+      <!-- ESTA LÍNEA SE OCULTARÁ EN MOBILE -->
+      <li class="frase-desktop">Tecnología, Sociedad y Ciudadanía Digital<br>Carmen Mindeguia</li>
+      <li><a href="#articulo">Artículo</a></li>
+      <li><a href="#acerca">Acerca de</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section id="portada" class="portada">
     <div class="portada-texto">
-      <h1>SOBRE LO GRATIS EN INTERNET</h1>
-      
+      <h1>SOBRE LO GRATIS EN INTERNET</h1>    
     </div>
   </section>
 
   <main>
     <section id="articulo">
       <article>
-        <h2>¿Es gratis Internet? El precio escondido de lo que parece gratuito</h2>
+        <h2>¿Es gratis Internet? <br>El precio escondido de lo que parece gratuito</h2>
         <p>Usamos Internet todos los días: para buscar información, mirar videos, escuchar música, 
         comunicarnos con otras personas, estudiar, jugar. Y muchas de esas cosas parecen ser 
         completamente gratuitas. <strong>¿Quién paga cuando usamos Google, YouTube, Instagram, Spotify o TikTok?</strong> 
@@ -226,12 +237,12 @@
 
     <section id="recursos">
       <h2>Recursos</h2>
-      <p>Podés ver la presentación haciendo clic aquí:  
-        <a href="https://gamma.app/docs/Es-gratis-Internet-El-precio-escondido-de-lo-que-parece-gratuito-2vw6siz9gg0v9wu" target="_blank">Ver presentación</a></p>
-        <p>Podés escuchar un podcast haciendo clic aquí:
-        <a href="https://notebooklm.google.com/notebook/fa36ecc4-0cad-4e3c-9cde-0923bf287c98/audio" target="_blank">Escuchar podcast</a></p>
-         <p>Para reflexionar más: El video que las redes no quieren que veas! de Santiago Bilinkis
-        <a href="https://youtu.be/dh2_uNd3zak?si=B8ul4j1qXP-dw-Bs" target="_blank">Ver video</a></p>                        
+      <p class="texto-recursos">Podés ver la presentación haciendo clic aquí: </p>
+        <a href="https://gamma.app/docs/Es-gratis-Internet-El-precio-escondido-de-lo-que-parece-gratuito-2vw6siz9gg0v9wu" target="_blank">Ver presentación</a>
+        <p class="texto-recursos">Podés escuchar un podcast haciendo clic aquí: </p>
+        <a href="https://notebooklm.google.com/notebook/fa36ecc4-0cad-4e3c-9cde-0923bf287c98/audio" target="_blank">Escuchar podcast</a>
+         <p class="texto-recursos">Para reflexionar más: El video que las redes no quieren que veas! de Santiago Bilinkis </p>
+        <a href="https://youtu.be/dh2_uNd3zak?si=B8ul4j1qXP-dw-Bs" target="_blank">Ver video</a>                      
     </section>
    </main> 
    <footer class="footer">
@@ -248,6 +259,12 @@
     Seminario de Tecnología, Sociedad y Ciudadanía Digital · UNIPE
   </p>
 </footer>
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("mostrar");
+  }
+</script>
+
 
  </body> 
  </html>
